@@ -1,0 +1,26 @@
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> gdb .\problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set01\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem01.c, line 5.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set01/.\problem01.exe
+[New Thread 9404.0x3780]
+[New Thread 9404.0x4e6c]
+
+Breakpoint 1, main () at problem01.c:5
+5           printf("jayam janmika\n");
+(gdb) n
+jayam janmika
+6           return 0;
+(gdb) n
+7       }
+(gdb) q
