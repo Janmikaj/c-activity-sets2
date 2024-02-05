@@ -1,0 +1,36 @@
+PS C:\Users\prath\github-classroom\c-activity-sets2> cd set01
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> git add .
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> gcc -g -O0 problem07.c -o problem07.exe
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> gdb .\problem07.exe 
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set01\problem07.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem07.c, line 9.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set01/.\problem07.exe 
+[New Thread 15532.0x21f4]
+[New Thread 15532.0x3440]
+
+Breakpoint 1, main () at problem07.c:9
+9           n=input_n();
+(gdb) 4
+Undefined command: "4".  Try "help".
+(gdb) n
+Enter the value of x
+4
+10          sum=sum_n_nos(n);
+(gdb) n
+11          output(n,sum);
+(gdb) n
+The sum of natural numbers till n of 4 is 1012      return 0;
+(gdb) p sum
+$1 = 10
+(gdb) q

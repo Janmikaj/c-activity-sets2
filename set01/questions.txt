@@ -1,0 +1,16 @@
+ what is call by reference ?
+ when we change the called function(formal parameters) and calling function(actual parameters) changes then it is call by reference.
+ what is call by value ?
+ when we change the called function(formal parameters) and calling function(actual parameters) doesn't changes then it is call by value.
+ calling function will be used in main.
+ why we use #include in c?
+ we use #include to use functions from library.
+ (*) pointer?
+ holds the memory address of another variable
+ return 0 in c ?
+ it means that there are no errors and program can run normally.
+ return 1 in c ?
+ it means that there is an error and program should still run.
+ when do we use void output in c?
+ when you don't want anything returned back.but to run the program.
+ 

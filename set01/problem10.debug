@@ -1,0 +1,30 @@
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> gcc -g -O0 problem10.c -o problem10.exe
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> gdb .\problem10.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set01\problem10.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401582: file problem10.c, line 41.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set01/.\problem10.exe
+[New Thread 14304.0x2570]
+[New Thread 14304.0xeb4]
+
+Breakpoint 1, main () at problem10.c:41
+41          input(a,b);
+(gdb) n
+enter string 1 : hello
+enter string 2 : hellw
+42          c=compute(a,b);
+(gdb) n
+43          output(a,b,c);
+(gdb) n
+hellw is greater than hello 44      return 0;
+(gdb) q

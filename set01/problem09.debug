@@ -1,0 +1,30 @@
+ C:\Users\prath\github-classroom\c-activity-sets2\set01> gcc -g -o0 problem09.c -o problem09.exe 
+PS C:\Users\prath\github-classroom\c-activity-sets2\set01> gdb .\problem09.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set01\problem09.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40156b: file problem09.c, line 42.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set01/.\problem09.exe
+[New Thread 6208.0x3c04]
+[New Thread 6208.0xe2c]
+
+Breakpoint 1, main () at problem09.c:42
+42          n=input();
+(gdb) n
+enter the value:25
+43          root=mysqrt(n);
+(gdb) n
+44          output(n,root);
+(gdb) n
+sqrt of 25.00 is 5.00
+45      }(gdb) q
+A debugging session is active.
