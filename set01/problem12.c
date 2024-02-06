@@ -1,80 +1,71 @@
-//12. Write a C program to find the sum of n complex numbers
+//12. Write a C program to find the sum of _n_ complex numbers
 #include <stdio.h>
 
-struct _complex 
-{
-	float real,imaginary;
+struct _complex
+ {
+    float real, imaginary;
 };
+
 typedef struct _complex Complex;
 
-int get_n();
-Complex input_complex();
-void input_n_complex(int n, Complex c[n]);
-Complex add(Complex a, Complex b);
-Complex add_n_complex(int n, Complex c[n]);
-void output(int n, Complex c[n], Complex result);
-
-int main()
+int get_n() 
 {
     int n;
-    n=get_n();
-    Complex C[n],sum;
-    input_n_complex(n,C);
-    sum=add_n_complex(n,C);
-    output(n,C,sum);
-    return 0;
+    printf("Enter the number of complex numbers: ");
+    scanf("%d", &n);
+    return n;
 }
 
-int get_n()
+Complex input_complex() 
 {
-	int n;
-	printf("Enter size: ");
-	scanf("%d",&n);
-	return n;
-}
-
-Complex input_complex()
-{
-    Complex r;
-    scanf("%f%f",&r.real,&r.imaginary);
-    return r;
+    Complex c;
+    printf("Enter real part: ");
+    scanf("%f", &c.real);
+    printf("Enter imaginary part: ");
+    scanf("%f", &c.imaginary);
+    return c;
 }
 
 void input_n_complex(int n, Complex c[n])
-{
-	int i;
-	for(i=0;i<n;i++)
-	{
-		c[i]=input_complex();
-	}
+ {
+    for (int i = 0; i < n; i++)
+     {
+        printf("For complex number %d:\n", i + 1);
+        c[i] = input_complex();
+    }
 }
 
-Complex add_complex(Complex a, Complex b)
+Complex add(Complex a, Complex b) 
 {
     Complex sum;
-    sum.real=a.real+b.real;
-    sum.imaginary=a.imaginary+b.imaginary;
+    sum.real = a.real + b.real;
+    sum.imaginary = a.imaginary + b.imaginary;
     return sum;
 }
 
-Complex add_n_complex(int n, Complex c[n])
+Complex add_n_complex(int n, Complex c[n]) 
 {
-	int i;
-	Complex sum;
-	sum.imaginary=0;sum.real=0;
-	for(i=0;i<n;i++)
-	{
-		sum=add_complex(sum,c[i]);
-	}
-	return sum;	
+    Complex result = {0, 0}; 
+    for (int i = 0; i < n; i++) 
+    {
+        result = add(result, c[i]);
+    }
+    return result;
 }
 
-void output(int n, Complex c[n], Complex result)
+void output(int n, Complex c[n], Complex result) 
 {
-	int i;
-    for(i=0;i<n-1;i++)
-    {
-        printf("%.f+%.fi + ",c[i].real,c[i].imaginary);
-    }
-    printf("%.f+%.fi is %.f+%.fi",c[n-1].real,c[n-1].imaginary,result.real,result.imaginary);
+    printf("The sum of the %d complex numbers is %.f + %.fi\n", n, result.real, result.imaginary);
+}
+
+int main() 
+{
+    int n;
+    n = get_n();
+    Complex numbers[n];
+input_n_complex(n, numbers);
+    Complex sum = add_n_complex(n, numbers);
+    output(n, numbers, sum);
+
+    return 0;
 }

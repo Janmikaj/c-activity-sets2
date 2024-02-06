@@ -30,5 +30,6 @@ int sum_n_nos(int n)
 }
 void output(int n, int sum)
 {
+ 
     printf("The sum of natural numbers till n of %d is %d",n,sum);
 }
