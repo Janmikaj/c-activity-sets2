@@ -52,10 +52,24 @@ Complex add_n_complex(int n, Complex c[n])
     }
     return result;
 }
-
+    
 void output(int n, Complex c[n], Complex result) 
 {
-    printf("The sum of the %d complex numbers is %.f + %.fi\n", n, result.real, result.imaginary);
+    for (int i = 0; i <= n; i++)
+    {
+        for(int i=0; i<n; i++)  
+    {
+        if(i != 0) 
+            printf("\n");
+        
+        printf("Real part of the %dth term is %.2f\n", i+1, c[i].real);
+        printf("Imaginary part of the %dth term is %.2f\n", i+1, c[i].imaginary);
+    }
+
+    printf("\nThe real part of the sum is: %.2f\n", result.real);
+    printf("The imaginary part of the sum is: %.2f\n", result.imaginary);
+    }
+   
 }
 
 int main() 

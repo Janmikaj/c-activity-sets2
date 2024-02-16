@@ -1,0 +1,36 @@
+PS C:\Users\prath\github-classroom\c-activity-sets2> cd set02
+PS C:\Users\prath\github-classroom\c-activity-sets2\set02> gcc -g -O0 problem01.c -o problem01.exe
+PS C:\Users\prath\github-classroom\c-activity-sets2\set02> gdb .\problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set02\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4014d2: file problem01.c, line 22.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set02/.\problem01.exe
+[New Thread 13376.0x4580]
+[New Thread 13376.0x442c]
+
+Breakpoint 1, main () at problem01.c:22
+22          printf("Enter the Base and Height of the Triangle:\n");
+(gdb) 2 3
+Undefined command: "2".  Try "help".
+(gdb) n
+Enter the Base and Height of the Triangle:
+23          input(&base, &height);
+(gdb) n
+Enter the base and height of the triangle: 2 3 
+24          find_area(base, height, &area);
+(gdb) n
+25          output(base, height, area);
+(gdb) n
+The area of triangle is 2.500000
+26          return 0;
+(gdb)

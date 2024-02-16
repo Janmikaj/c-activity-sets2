@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<math.h>
 float input()
-{
+{  
     int x;
     printf("enter the value:");
     scanf("%d",&x);

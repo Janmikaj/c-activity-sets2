@@ -6,14 +6,14 @@ void input(char *a,char *b)
       printf("enter string 2 : ");
     scanf("%s",b);
 }
-int compute(char *a,char *b) //for ex : a[]=heart b[]=hello
+int compute(char *a,char *b) 
 {   int i=0;
     while(a[i]!='\0'|| b[i]!='\0')  
     {
         
-            if(a[i]!=b[i])  // checks for each alphabets , h ==h ,e==e ,a!=l
+            if(a[i]!=b[i])  
                {
-                    return a[i]-b[i]; // so a-l --->97-109 = -12 
+                    return a[i]-b[i]; 
                }
 
           i++;
