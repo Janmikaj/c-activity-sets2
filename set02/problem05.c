@@ -4,14 +4,16 @@ int input();
 int find_gcd(int a, int b);
 void output(int a, int b, int gcd);
 
-int input() {
+int input() 
+{
     int num;
     printf("Enter a number: ");
     scanf("%d", &num);
     return num;
 }
 
-int find_gcd(int a, int b) {
+int find_gcd(int a, int b) 
+{
     int temp;
     while (b != 0) {
         temp = b;
@@ -20,7 +22,8 @@ int find_gcd(int a, int b) {
     }
     return a;
 }
-void output(int a, int b, int gcd) {
+void output(int a, int b, int gcd) 
+{
     printf("The GCD of %d and %d is %d.\n", a, b, gcd);
 }
 int main() {
