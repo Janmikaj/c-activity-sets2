@@ -1,0 +1,35 @@
+PS C:\Users\prath\github-classroom\c-activity-sets2\set03> gcc -g -O0 problem01.c -o problem01.exe
+PS C:\Users\prath\github-classroom\c-activity-sets2\set03> gdb .\problem01.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set03\problem01.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40157b: file problem01.c, line 35.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set03/.\problem01.exe
+[New Thread 14852.0x3330]
+[New Thread 14852.0x2b30]
+
+Breakpoint 1, main () at problem01.c:35
+35          input(&x1,&y1,&x2,&y2);
+(gdb) n
+enter the value of x1
+1
+enter the value of y1
+1
+enter the value of x2
+2
+enter the value of y2
+2
+37          distance = find_distance(x1,y1,x2,y2);
+(gdb) n
+38          output(x1,y1,x2,y2,distance);
+(gdb) n
+The distance between point (1.00,1.00) and (2.00,2.00) is 1.4139            return 0;
