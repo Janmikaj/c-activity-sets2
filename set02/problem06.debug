@@ -1,0 +1,32 @@
+PS C:\Users\prath\github-classroom\c-activity-sets2> cd set02
+PS C:\Users\prath\github-classroom\c-activity-sets2\set02> gcc -g -O0 problem06.c -o problem06.exe
+PS C:\Users\prath\github-classroom\c-activity-sets2\set02> gdb .\problem06.exe 
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\prath\github-classroom\c-activity-sets2\set02\problem06.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401471: file problem06.c, line 10.
+(gdb) r
+Starting program: C:\Users\prath\github-classroom\c-activity-sets2\set02/.\problem06.exe
+[New Thread 7040.0x14a4]
+[New Thread 7040.0x3a38]
+
+Breakpoint 1, main () at problem06.c:10
+10          input_string(a);
+(gdb) n
+Enter a string: janmika
+11          str_reverse(a, revs_str);
+(gdb) n
+12          output(a,revs_str);
+(gdb) n
+Original String is janmika
+Reversed String is akimnaj
+13          return 0;
+(gdb)
